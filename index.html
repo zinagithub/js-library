@@ -7,12 +7,12 @@
     <title>My Library</title>
     <link href="style.css" rel="stylesheet" >
 </head>
-<body>
+<body onload = "render()">
     <header>
         <h5 >My Library</h5>
         <div class = "divBut">
-            <button  id = "addBook" >Add Book</button>
-            <button  id = "removeAllBook" >Clear Books</button>
+            <button  id = "addBook" onclick="addBookToLibrary()">Add Book</button>
+            <button  id = "removeAllBook" onclick="removeAllBook()">Clear Books</button>
         </div>
         
     </header>
