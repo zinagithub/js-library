@@ -2,3 +2,100 @@ body {
 	background: #FFF;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }
+header {
+	width :100%;
+	height: 50px;
+	background: #FFF;
+	border: 2px solid #00b894;
+	border-radius: 5px;
+    display : inline-block;
+	
+}
+header h5{
+	margin : 15px auto;
+	padding-left: 10px;
+	color : #00b894;
+	display : inline-block;
+
+}
+.divBut {
+	width : auto;
+	height: auto;
+	display: inline-block;
+	float: right;
+	margin: 5px 10px auto;
+	border: none;
+}
+.divBut button {
+	display : inline-block;
+	
+}
+button {
+	width : 100px;
+	height: 40px;
+	background: #FFF;
+	border: 2px solid #00b894;
+	border-radius: 5px;
+	color : #00b894;
+	outline: none;
+}
+#getBookForm {
+	display : none;
+	width : 320px;
+	height: 400px;
+	background: #000;
+	color :#FFF;
+	position : absolute;
+	top : 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	margin : 30px auto;
+}
+.imgBook {
+	width : 150px;
+	height: 50px;
+	border-radius: 20%;
+	position : absolute;
+	top : -25px;
+	left : calc(42% - 50px);
+	background: #00b894;
+	color : black;
+
+}
+.imgBook p {
+	text-align: center;
+	margin : 5px auto;
+	font-size: 30px;
+}
+form {
+	width : 95%;
+	height: auto;
+	margin : 40px auto;
+}
+label, input,select  {	 
+     margin  : 10px;
+     padding : 10px;    
+}
+input[type="text"]{
+    display : block;
+    width   : 250px;
+    padding : 10px;
+}
+#displayBooks {
+	width: 100%;
+	height: 800px;
+	margin : 20px auto;
+	background : #fff;
+	text-align: center
+}
+.card {
+	width : 200px;
+	height: 260px;
+	border : 2px solid #00b894;
+	border-radius: 5px;
+	background: #FFF;
+	margin : 5px;
+	float : left;
+	color : #00b894;
+}
