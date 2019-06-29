@@ -66,9 +66,29 @@ function render(){
     
 }
 
+function changeReadStatus(){
+	let myInput = Number(this.id[1]);
+	myLibrary[myInput].toggleStatus();
+	localStorage.clear();
+  	setMyLibrary();
 
+}
+function deleteBook(){
+   let conf = confirm("are you sure?");
+   if (conf){
+   	myLibrary.splice(this.id,1);
+  	localStorage.clear();
+  	setMyLibrary();
+   	render();
+   }  
+}
 function addBookToLibrary() {
   // do stuff here
     info1.style.display = "block";
     but1.addEventListener("click",saveBook);
+}
+function removeAllBook(){
+	localStorage.clear();
+	myLibrary = [];
+	info2.innerHTML = "<div id = 'displayBooks'>Empty Library</div>"
 }
