@@ -12,9 +12,11 @@ function Book(title, author, pages,read) {
   this.pages = pages
   this.read = read
 }
+
 Book.prototype.toggleStatus = function() {
   this.read = !(this.read)
 }
+
 function saveBook(){
 	var title  = document.getElementById("title").value;
 	var author = document.getElementById("author").value;
@@ -25,6 +27,7 @@ function saveBook(){
     myLibrary.push(book1);
     setMyLibrary()
 }
+
 function getMyLibrary(){
 	let myLibrary_deserialized = JSON.parse(localStorage.getItem("myLibrary")).map((book) =>
       Object.assign(new Book(), book),
@@ -32,10 +35,12 @@ function getMyLibrary(){
 	return myLibrary_deserialized
 
 }
+
 function setMyLibrary(){
 	let myLibrary_serialized =JSON.stringify(myLibrary)
 	localStorage.setItem("myLibrary",myLibrary_serialized);
 }
+
 function render(){
     let  objLibrary = getMyLibrary();
 
@@ -82,13 +87,17 @@ function deleteBook(){
    	render();
    }  
 }
+
 function addBookToLibrary() {
-  // do stuff here
     info1.style.display = "block";
     but1.addEventListener("click",saveBook);
 }
+
 function removeAllBook(){
-	localStorage.clear();
-	myLibrary = [];
-	info2.innerHTML = "<div id = 'displayBooks'>Empty Library</div>"
+  let conf = confirm("Are you sure you want to clear your library?");
+  if (conf) {
+    localStorage.clear();
+    myLibrary = [];
+    info2.innerHTML = "<div id = 'displayBooks'>Empty Library</div>"
+  }
 }
