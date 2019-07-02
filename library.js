@@ -97,6 +97,10 @@ const addBookToLibrary = () => {
     but1.addEventListener("click",saveBook);
 }
 
+const cancleBookForm = () => {
+  info1.style.display = 'none';
+}
+
 const removeAllBook = () => {
   let conf = confirm("Are you sure you want to clear your library?");
   if (conf) {
