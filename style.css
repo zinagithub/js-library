@@ -38,12 +38,29 @@ button {
 	border-radius: 5px;
 	color : #00b894;
 	outline: none;
+	transition-duration: 0.2s;
+	transition-property: color, background;
 }
+
+.good-button:hover {
+	background: #a0d470;
+	color: black;
+	cursor: pointer;
+	border: none;
+}
+
+.bad-button:hover {
+	background: red;
+	color: black;
+	cursor: pointer;
+	border: none;
+}
+
 #getBookForm {
 	display : none;
 	width : 320px;
 	height: 400px;
-	background: #000;
+	background: #59694d;
 	color :#FFF;
 	position : absolute;
 	top : 50%;
@@ -51,6 +68,7 @@ button {
 	transform: translate(-50%,-50%);
 	box-sizing: border-box;
 	margin : 30px auto;
+	border-radius: 5px;
 }
 .imgBook {
 	width : 150px;
@@ -61,7 +79,7 @@ button {
 	left : calc(42% - 50px);
 	background: #00b894;
 	color : black;
-
+	padding: 5px 10px;
 }
 .imgBook p {
 	text-align: center;
@@ -98,4 +116,10 @@ input[type="text"]{
 	margin : 5px;
 	float : left;
 	color : #00b894;
+}
+
+.button-div {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 15px;
 }

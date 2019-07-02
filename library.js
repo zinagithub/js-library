@@ -67,7 +67,7 @@ const render = () => {
     		}else{
     			mytext += "<label>you read it ?</label><input type='checkbox'  class = 'status' id = 'i"+i.toString()+"'>"
     		}
-    		mytext += "<button class = 'delButton' onclick = 'deleteBook' id ="+i.toString()+" >Delete Book</button></div>";
+    		mytext += "<button class = 'delButton bad-button' onclick = 'deleteBook' id ="+i.toString()+" >Delete Book</button></div>";
     		info2.innerHTML = mytext;
         }
         info3 = document.getElementsByClassName("delButton");

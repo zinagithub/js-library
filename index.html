@@ -11,8 +11,8 @@
     <header>
         <h5 >My Library</h5>
         <div class = "divBut">
-            <button  id = "addBook" onclick="addBookToLibrary()">Add Book</button>
-            <button  id = "removeAllBook" onclick="removeAllBook()">Clear Books</button>
+            <button  id = "addBook" class="good-button" onclick="addBookToLibrary()">Add Book</button>
+            <button  id = "removeAllBook" class="bad-button" onclick="removeAllBook()">Clear Books</button>
         </div>
         
     </header>
@@ -25,7 +25,7 @@
 
     <div id = "getBookForm">
         <div class ="imgBook">
-            <p style = "text-align: center">Infos book</p>
+            <p style = "text-align: center">New Book</p>
         </div>
         <form>
             <label >Title</label>
@@ -37,7 +37,10 @@
             <label>you read it</label>
             <input type="checkbox" checked="checked" id = "checked">
             <label></label>
-            <button id = "addButton" >Add Book</button>
+            <div class="button-div">
+                <button id = "addButton" class="good-button">Add Book</button>
+                <button id = "cancleButton" class="bad-button">Cancle</button>
+            </div>
         </form>
         
     </div>
