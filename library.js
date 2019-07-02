@@ -63,7 +63,7 @@ const render = () => {
     		"</h3><p>Author : "+myLibrary[i].author+"</p><p>Pages : "+myLibrary[i].pages+
     		"</p>";
     		if (myLibrary[i].read){
-    			 mytext+= "<label>you read it ?</label><input type='checkbox' checked  class = 'status' id= 'i"+i.toString()+"'>"
+    			 mytext+= "<label>Read?</label><input type='checkbox' checked  class = 'status' id= 'i"+i.toString()+"'>"
     		}else{
     			mytext += "<label>you read it ?</label><input type='checkbox'  class = 'status' id = 'i"+i.toString()+"'>"
     		}
@@ -83,7 +83,7 @@ const render = () => {
 }
 
 const deleteBook = () => {
-   let conf = confirm("are you sure?");
+   let conf = confirm("Are you sure?");
    if (conf){
    	myLibrary.splice(this.id,1);
   	localStorage.clear();

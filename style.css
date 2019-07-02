@@ -12,11 +12,11 @@ header {
 	
 }
 header h5{
-	margin : 15px auto;
+	margin : 12px auto;
 	padding-left: 10px;
 	color : #00b894;
 	display : inline-block;
-
+	font-size: 1.5em;
 }
 .divBut {
 	width : auto;
@@ -122,4 +122,8 @@ input[type="text"]{
 	display: flex;
 	justify-content: space-around;
 	margin-top: 15px;
+}
+
+.delButton {
+	margin-top: 25px;
 }
