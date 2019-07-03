@@ -99,7 +99,7 @@ const addBookToLibrary = () => {
 }
 
 const cancleBookForm = () => {
-  info1.style.display = 'none';
+  getBookForm_Info.style.display = 'none';
 }
 
 const removeAllBook = () => {
