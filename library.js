@@ -1,9 +1,8 @@
 let myLibrary = [];
 
-const info1 = document.getElementById("getBookForm");
-const info2 = document.getElementById("displayBooks");
-const but1   = document.getElementById("addButton");
-const but2   = document.getElementById("addBook");
+const getBookForm_Info = document.getElementById("getBookForm");
+const displayBooks_Info = document.getElementById("displayBooks");
+const addBut   = document.getElementById("addButton");
 
 class Book {
   constructor(title, author, pages,read) {
@@ -17,12 +16,7 @@ class Book {
     this.read = !(this.read)
   }
 
-  changeReadStatus() {
-    let myInput = Number(this.id[1]);
-    myLibrary[myInput].toggleStatus();
-    localStorage.clear();
-      setMyLibrary();
-  }
+  
 
 }
 
@@ -63,21 +57,21 @@ const render = () => {
     		"</h3><p>Author : "+myLibrary[i].author+"</p><p>Pages : "+myLibrary[i].pages+
     		"</p>";
     		if (myLibrary[i].read){
-    			 mytext+= "<label>Read?</label><input type='checkbox' checked  class = 'status' id= 'i"+i.toString()+"'>"
+    			 mytext+= "<label>You read it?</label><input type='checkbox' checked  class = 'status' id= 'i"+i.toString()+"'>"
     		}else{
-    			mytext += "<label>you read it ?</label><input type='checkbox'  class = 'status' id = 'i"+i.toString()+"'>"
+    			mytext += "<label>You read it ?</label><input type='checkbox'  class = 'status' id = 'i"+i.toString()+"'>"
     		}
     		mytext += "<button class = 'delButton bad-button' onclick = 'deleteBook' id ="+i.toString()+" >Delete Book</button></div>";
-    		info2.innerHTML = mytext;
+    		displayBooks_Info.innerHTML = mytext;
         }
         info3 = document.getElementsByClassName("delButton");
         info4 = document.getElementsByClassName("status");
         for (i = 0;i<info3.length;i++){
     		info3[i].addEventListener("click",deleteBook);
-    		info4[i].addEventListener("click", Book.changeReadStatus);
+    		info4[i].addEventListener("click", changeReadStatus);
 		}
     } else {
-    	info2.innerText = "Empty Library"
+    	displayBooks_Info.innerText = "Empty Library"
     }
     
 }
@@ -92,9 +86,16 @@ const deleteBook = () => {
    }  
 }
 
+function changeReadStatus ()  {
+    let myInput = Number(this.id[1]);
+    myLibrary[myInput].toggleStatus();
+    localStorage.clear();
+    setMyLibrary();
+  }
+
 const addBookToLibrary = () => {
-    info1.style.display = "block";
-    but1.addEventListener("click",saveBook);
+    getBookForm_Info.style.display = "block";
+    addBut.addEventListener("click",saveBook);
 }
 
 const cancleBookForm = () => {
@@ -106,6 +107,6 @@ const removeAllBook = () => {
   if (conf) {
     localStorage.clear();
     myLibrary = [];
-    info2.innerHTML = "<div id = 'displayBooks'>Empty Library</div>"
+    displayBooks_Info.innerHTML = "<div id = 'displayBooks'>Empty Library</div>"
   }
 }
