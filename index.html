@@ -7,7 +7,44 @@
     <title>My Library</title>
     <link href="style.css" rel="stylesheet" >
 </head>
-<body>
+<body onload = "render()">
+    <header>
+        <h5 >My Library</h5>
+        <div class = "divBut">
+            <button  id = "addBook" class="good-button" onclick="addBookToLibrary()">Add Book</button>
+            <button  id = "removeAllBook" class="bad-button" onclick="removeAllBook()">Clear Books</button>
+        </div>
+        
+    </header>
+    
+    
+    <div id = "displayBooks">
 
-</body>
+    </div> 
+    
+
+    <div id = "getBookForm">
+        <div class ="imgBook">
+            <p style = "text-align: center">New Book</p>
+        </div>
+        <form>
+            <label >Title</label>
+            <input type="text" name="title" placeholder="Enter the book's title" id = "title" required>
+            <label>Author</label>
+            <input type="text" name="author" placeholder="Enter the Author" id ="author" required>
+            <label>Pages</label>
+            <input type="number" name="nbPages" placeholder="Number of pages" id = "nbPages" required>
+            <label>Read?</label>
+            <input type="checkbox" checked="checked" id = "checked">
+            <label></label>
+            <div class="button-div">
+                <button id = "addButton" type="submit" class="good-button">Add Book</button>
+                <button id = "cancleButton" type='button' class="bad-button" onclick="cancleBookForm()">Cancle</button>
+            </div>
+        </form>
+        
+    </div>
+
+	<script type ="text/javascript" src="library.js"></script>
+ </body>
 </html>
