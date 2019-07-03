@@ -12,4 +12,4 @@ Open your git bash and cd to the location you'd like to put your files the run t
 >git clone https://github.com/zinagithub/js-library.git
 
 Here is the link to the live version of this project
-[here](https://zinagithub.github.io//)	
+[here](https://zinagithub.github.io/js-library/)	
